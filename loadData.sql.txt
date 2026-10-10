@@ -1,0 +1,139 @@
+<--Carga de datos para las tablas-->
+
+-- Tabla Empresa--
+INSERT INTO Empresa(id_empresa,nombre_E, rut_E) VALUES (1,'Taller Mecánico Central', '76.123.456-K');
+INSERT INTO Empresa(id_empresa,nombre_E, rut_E) VALUES (2,'Taller Mecánico del MISH', '67.567.236-7');
+
+--Tabla Cargo --
+INSERT INTO Cargo(id_cargo,nombre_cargo) VALUES (1,'Jefe Central');
+INSERT INTO Cargo(id_cargo,nombre_cargo) VALUES (2,'Jefe Mish');
+INSERT INTO Cargo(id_cargo,nombre_cargo) VALUES (3,'Técnico Automotriz');
+INSERT INTO Cargo(id_cargo,nombre_cargo) VALUES (4,'Mecánico General');
+INSERT INTO Cargo(id_cargo,nombre_cargo) VALUES (5,'Especialista en Sistemas Electrónicos');
+INSERT INTO Cargo(id_cargo,nombre_cargo) VALUES (6,'Electricista');
+INSERT INTO Cargo(id_cargo,nombre_cargo) VALUES (7,'Especialista en Frenos y Suspensión');
+INSERT INTO Cargo(id_cargo,nombre_cargo) VALUES (8,'Especialista en Frenos');
+INSERT INTO Cargo(id_cargo,nombre_cargo) VALUES (9,'Chapista y Pintor');
+INSERT INTO Cargo(id_cargo,nombre_cargo) VALUES (10,'Encargado de Repuestos');
+INSERT INTO Cargo(id_cargo,nombre_cargo) VALUES (11,'Ayudante de Mecánico');
+INSERT INTO Cargo(id_cargo,nombre_cargo) VALUES (12,'Personal de Limpieza');
+INSERT INTO Cargo(id_cargo,nombre_cargo) VALUES (13,'Ayudante de Mecánico');
+INSERT INTO Cargo(id_cargo,nombre_cargo) VALUES (14,'Asesor de Servicio');
+
+--Tabla EstadoP--
+INSERT INTO EstadoP(id_estado_p,nombre_estado_p) VALUES (1,'ACEPTADO');
+INSERT INTO EstadoP(id_estado_p,nombre_estado_p) VALUES (2,'ACEPTADO');
+INSERT INTO EstadoP(id_estado_p,nombre_estado_p) VALUES (3,'ACEPTADO');
+INSERT INTO EstadoP(id_estado_p,nombre_estado_p) VALUES (4,'ACEPTADO');
+INSERT INTO EstadoP(id_estado_p,nombre_estado_p) VALUES (5,'ACEPTADO');
+INSERT INTO EstadoP(id_estado_p,nombre_estado_p) VALUES (6,'RECHAZADO');
+INSERT INTO EstadoP(id_estado_p,nombre_estado_p) VALUES (7,'RECHAZADO');
+INSERT INTO EstadoP(id_estado_p,nombre_estado_p) VALUES (8,'RECHAZADO');
+INSERT INTO EstadoP(id_estado_p,nombre_estado_p) VALUES (9,'RECHAZADO');
+INSERT INTO EstadoP(id_estado_p,nombre_estado_p) VALUES (10,'RECHAZADO');
+
+--Tabla EstadoT--
+INSERT INTO EstadoT(id_estado_t,nombre_estado_t) VALUES (1,'INICIADO');
+INSERT INTO EstadoT(id_estado_t,nombre_estado_t) VALUES (2,'INICIADO');
+INSERT INTO EstadoT(id_estado_t,nombre_estado_t) VALUES (3,'INICIADO');
+INSERT INTO EstadoT(id_estado_t,nombre_estado_t) VALUES (4,'INICIADO');
+INSERT INTO EstadoT(id_estado_t,nombre_estado_t) VALUES (5,'EN PROCESO');
+INSERT INTO EstadoT(id_estado_t,nombre_estado_t) VALUES (6,'EN PROCESO');
+INSERT INTO EstadoT(id_estado_t,nombre_estado_t) VALUES (7,'EN PROCESO');
+INSERT INTO EstadoT(id_estado_t,nombre_estado_t) VALUES (8,'EN PROCESO');
+INSERT INTO EstadoT(id_estado_t,nombre_estado_t) VALUES (9,'TERMINADO');
+INSERT INTO EstadoT(id_estado_t,nombre_estado_t) VALUES (10,'TERMINADO');
+INSERT INTO EstadoT(id_estado_t,nombre_estado_t) VALUES (11,'TERMINADO');
+INSERT INTO EstadoT(id_estado_t,nombre_estado_t) VALUES (12,'TERMINADO');
+
+--Tabla Vehiculo--
+INSERT INTO Vehiculo (id_vehiculo, patente, marca, modelo) VALUES (1, 'AB1234', 'Toyota', 'Yaris');
+INSERT INTO Vehiculo (id_vehiculo, patente, marca, modelo) VALUES (2, 'CD5678', 'Nissan', 'V16');
+INSERT INTO Vehiculo (id_vehiculo, patente, marca, modelo) VALUES (3, 'EF9012', 'Chevrolet', 'Spark');
+
+--Tabla Tarea--
+INSERT INTO Tarea (id_tarea, nombre_tarea, costo_tarea) VALUES (1, 'Cambio de Aceite', 35000);
+INSERT INTO Tarea (id_tarea, nombre_tarea, costo_tarea) VALUES (2, 'Alineacion y Balanceo', 25000);
+INSERT INTO Tarea (id_tarea, nombre_tarea, costo_tarea) VALUES (3, 'Cambio Pastillas de Freno', 45000);
+
+--Tabla Local--
+INSERT INTO Local (id_local, id_empresa, nombre_L, direccion_L, comuna_L) VALUES (1, 1, 'Local Centro Santiago', 'Av. Matta 123', 'Santiago');
+INSERT INTO Local (id_local, id_empresa, nombre_L, direccion_L, comuna_L) VALUES (2, 2, 'Local Mish Providencia', 'Av. Providencia 456', 'Providencia');
+
+--Tabla Servicio--
+INSERT INTO Servicio (id_servicio, id_local, nombre_S, descripcion_S) VALUES (1, 1, 'Mantencion 10.000 KM', 'Revision general y fluidos');
+INSERT INTO Servicio (id_servicio, id_local, nombre_S, descripcion_S) VALUES (2, 2, 'Revision Tecnica Previa', 'Chequeo de gases y frenos');
+
+--Tabla Empleado--
+INSERT INTO Empleado (id_empleado, id_local, id_cargo, nombre_T, rut_T, correo_T) VALUES (1, 1, 1, 'Juan Perez', '15.111.222-3', 'jperez@tallcentral.cl');
+INSERT INTO Empleado (id_empleado, id_local, id_cargo, nombre_T, rut_T, correo_T) VALUES (2, 1, 4, 'Diego Ramirez', '16.333.444-5', 'dramirez@tallcentral.cl');
+INSERT INTO Empleado (id_empleado, id_local, id_cargo, nombre_T, rut_T, correo_T) VALUES (3, 2, 2, 'Maria Lopez', '17.555.666-7', 'mlopez@mish.cl');
+INSERT INTO Empleado (id_empleado, id_local, id_cargo, nombre_T, rut_T, correo_T) VALUES (4, 1, 4, 'Pedro Soto', '18.111.222-3', 'psoto@tallcentral.cl');
+INSERT INTO Empleado (id_empleado, id_local, id_cargo, nombre_T, rut_T, correo_T) VALUES (5, 1, 1, 'Ana Ruiz', '14.111.222-3', 'aruiz@tallcentral.cl');
+
+--Tabla Sueldo--
+INSERT INTO Sueldo (id_sueldo, id_empleado, cantidad, fecha_pago) VALUES (1, 1, 1200000, '2026-09-30');
+INSERT INTO Sueldo (id_sueldo, id_empleado, cantidad, fecha_pago) VALUES (2, 2, 800000, '2026-09-30');
+INSERT INTO Sueldo (id_sueldo, id_empleado, cantidad, fecha_pago) VALUES (3, 3, 1300000, '2026-09-30');
+INSERT INTO Sueldo (id_sueldo, id_empleado, cantidad, fecha_pago) VALUES (4, 4, 900000, '2026-09-30');
+INSERT INTO Sueldo (id_sueldo, id_empleado, cantidad, fecha_pago) VALUES (5, 5, 1500000, '2026-09-30');
+
+--Tabla Detalle-Servicio--
+INSERT INTO Detalle_Servicio (id_detalle_servicio, id_servicio, id_tarea) VALUES (1, 1, 1);
+INSERT INTO Detalle_Servicio (id_detalle_servicio, id_servicio, id_tarea) VALUES (2, 2, 3);
+
+--Tabla Presupuesto--
+INSERT INTO Presupuesto (id_presupuesto, id_local, id_estado_p, id_empleado, id_vehiculo, fecha, monto_total) VALUES (1, 1, 1, 1, 1, '2026-10-05', 35000);
+INSERT INTO Presupuesto (id_presupuesto, id_local, id_estado_p, id_empleado, id_vehiculo, fecha, monto_total) VALUES (2, 2, 6, 3, 2, '2026-10-06', 150000);
+INSERT INTO Presupuesto (id_presupuesto, id_local, id_estado_p, id_empleado, id_vehiculo, fecha, monto_total) VALUES (3, 1, 2, 1, 2, '2026-10-08', 25000);
+INSERT INTO Presupuesto (id_presupuesto, id_local, id_estado_p, id_empleado, id_vehiculo, fecha, monto_total) VALUES (4, 1, 3, 1, 3, '2026-10-09', 70000); 
+INSERT INTO Presupuesto (id_presupuesto, id_local, id_estado_p, id_empleado, id_vehiculo, fecha, monto_total) VALUES (5, 2, 4, 3, 1, '2026-10-10', 35000); 
+INSERT INTO Presupuesto (id_presupuesto, id_local, id_estado_p, id_empleado, id_vehiculo, fecha, monto_total) VALUES (6, 1, 1, 1, 1, '2020-03-15', 50000); 
+INSERT INTO Presupuesto (id_presupuesto, id_local, id_estado_p, id_empleado, id_vehiculo, fecha, monto_total) VALUES (7, 1, 1, 1, 1, '2020-05-20', 80000); 
+INSERT INTO Presupuesto (id_presupuesto, id_local, id_estado_p, id_empleado, id_vehiculo, fecha, monto_total) VALUES (8, 1, 1, 1, 2, '2021-06-10', 40000); 
+INSERT INTO Presupuesto (id_presupuesto, id_local, id_estado_p, id_empleado, id_vehiculo, fecha, monto_total) VALUES (9, 1, 1, 1, 2, '2021-08-15', 120000); 
+INSERT INTO Presupuesto (id_presupuesto, id_local, id_estado_p, id_empleado, id_vehiculo, fecha, monto_total) VALUES (10, 1, 6, 1, 3, '2023-01-10', 30000); 
+INSERT INTO Presupuesto (id_presupuesto, id_local, id_estado_p, id_empleado, id_vehiculo, fecha, monto_total) VALUES (11, 1, 6, 1, 3, '2024-02-15', 45000); 
+INSERT INTO Presupuesto (id_presupuesto, id_local, id_estado_p, id_empleado, id_vehiculo, fecha, monto_total) VALUES (12, 1, 6, 1, 3, '2025-07-20', 90000); 
+INSERT INTO Presupuesto (id_presupuesto, id_local, id_estado_p, id_empleado, id_vehiculo, fecha, monto_total) VALUES (13, 1, 1, 2, 1, '2025-10-05', 200000);
+INSERT INTO Presupuesto (id_presupuesto, id_local, id_estado_p, id_empleado, id_vehiculo, fecha, monto_total) VALUES (14, 2, 1, 3, 2, '2024-11-20', 60000);
+
+--Tabla Detalle-Presupuesto--
+INSERT INTO Detalle_Presupuesto (id_detalle_presupuesto, id_tarea, id_presupuesto) VALUES (1, 1, 1);
+INSERT INTO Detalle_Presupuesto (id_detalle_presupuesto, id_tarea, id_presupuesto) VALUES (2, 3, 2);
+INSERT INTO Detalle_Presupuesto (id_detalle_presupuesto, id_tarea, id_presupuesto) VALUES (3, 2, 3); 
+INSERT INTO Detalle_Presupuesto (id_detalle_presupuesto, id_tarea, id_presupuesto) VALUES (4, 3, 4); 
+INSERT INTO Detalle_Presupuesto (id_detalle_presupuesto, id_tarea, id_presupuesto) VALUES (5, 2, 4); 
+INSERT INTO Detalle_Presupuesto (id_detalle_presupuesto, id_tarea, id_presupuesto) VALUES (6, 1, 5); 
+INSERT INTO Detalle_Presupuesto (id_detalle_presupuesto, id_tarea, id_presupuesto) VALUES (7, 1, 6);
+INSERT INTO Detalle_Presupuesto (id_detalle_presupuesto, id_tarea, id_presupuesto) VALUES (8, 2, 7);
+INSERT INTO Detalle_Presupuesto (id_detalle_presupuesto, id_tarea, id_presupuesto) VALUES (9, 1, 8);
+INSERT INTO Detalle_Presupuesto (id_detalle_presupuesto, id_tarea, id_presupuesto) VALUES (10, 3, 9);
+INSERT INTO Detalle_Presupuesto (id_detalle_presupuesto, id_tarea, id_presupuesto) VALUES (11, 1, 13);
+INSERT INTO Detalle_Presupuesto (id_detalle_presupuesto, id_tarea, id_presupuesto) VALUES (12, 2, 13);
+INSERT INTO Detalle_Presupuesto (id_detalle_presupuesto, id_tarea, id_presupuesto) VALUES (13, 3, 13);
+
+--Tabla Trabajo--
+INSERT INTO Trabajo (id_trabajo, id_presupuesto, id_local, id_estado_t, id_empleado_jefe, fecha_inicio, fecha_fin) VALUES (1, 1, 1, 5, 1, '2026-10-07', '2026-10-10');
+INSERT INTO Trabajo (id_trabajo, id_presupuesto, id_local, id_estado_t, id_empleado_jefe, fecha_inicio, fecha_fin) VALUES (2, 3, 1, 10, 1, '2026-10-08', '2026-10-08');
+INSERT INTO Trabajo (id_trabajo, id_presupuesto, id_local, id_estado_t, id_empleado_jefe, fecha_inicio, fecha_fin) VALUES (3, 4, 1, 6, 1, '2026-10-09', NULL); 
+INSERT INTO Trabajo (id_trabajo, id_presupuesto, id_local, id_estado_t, id_empleado_jefe, fecha_inicio, fecha_fin) VALUES (4, 5, 2, 11, 3, '2026-10-10', '2026-10-10'); 
+INSERT INTO Trabajo (id_trabajo, id_presupuesto, id_local, id_estado_t, id_empleado_jefe, fecha_inicio, fecha_fin) VALUES (5, 6, 1, 9, 1, '2020-03-16', '2020-03-18'); 
+INSERT INTO Trabajo (id_trabajo, id_presupuesto, id_local, id_estado_t, id_empleado_jefe, fecha_inicio, fecha_fin) VALUES (6, 7, 1, 9, 1, '2020-05-21', '2020-05-25'); 
+INSERT INTO Trabajo (id_trabajo, id_presupuesto, id_local, id_estado_t, id_empleado_jefe, fecha_inicio, fecha_fin) VALUES (7, 8, 1, 9, 1, '2021-06-11', '2021-06-12'); 
+INSERT INTO Trabajo (id_trabajo, id_presupuesto, id_local, id_estado_t, id_empleado_jefe, fecha_inicio, fecha_fin) VALUES (8, 9, 1, 9, 1, '2021-08-16', '2021-08-26'); 
+INSERT INTO Trabajo (id_trabajo, id_presupuesto, id_local, id_estado_t, id_empleado_jefe, fecha_inicio, fecha_fin) VALUES (9, 13, 1, 9, 1, '2025-10-06', '2025-10-10'); 
+
+--Tabla Detalle-Trabajo--
+INSERT INTO Detalle_Trabajo (id_detalle_trabajo, id_tarea, id_trabajo, id_estado_t, id_empleado, detalle) VALUES (1, 1, 1, 9, 2, 'Se cambio el aceite del motor con exito');
+INSERT INTO Detalle_Trabajo (id_detalle_trabajo, id_tarea, id_trabajo, id_estado_t, id_empleado, detalle) VALUES (2, 2, 2, 10, 2, 'Alineacion completada sin problemas por Diego');
+INSERT INTO Detalle_Trabajo (id_detalle_trabajo, id_tarea, id_trabajo, id_estado_t, id_empleado, detalle) VALUES (3, 3, 3, 6, 2, 'Diego esta instalando las pastillas de freno actualmente'); 
+INSERT INTO Detalle_Trabajo (id_detalle_trabajo, id_tarea, id_trabajo, id_estado_t, id_empleado, detalle) VALUES (4, 2, 3, 2, 1, 'Juan acaba de iniciar la alineacion'); 
+INSERT INTO Detalle_Trabajo (id_detalle_trabajo, id_tarea, id_trabajo, id_estado_t, id_empleado, detalle) VALUES (5, 1, 4, 11, 3, 'Maria realizo el cambio de aceite rapidamente');
+INSERT INTO Detalle_Trabajo (id_detalle_trabajo, id_tarea, id_trabajo, id_estado_t, id_empleado, detalle) VALUES (6, 1, 5, 9, 2, 'Aceite 2020'); 
+INSERT INTO Detalle_Trabajo (id_detalle_trabajo, id_tarea, id_trabajo, id_estado_t, id_empleado, detalle) VALUES (7, 2, 6, 9, 2, 'Alineacion 2020'); 
+INSERT INTO Detalle_Trabajo (id_detalle_trabajo, id_tarea, id_trabajo, id_estado_t, id_empleado, detalle) VALUES (8, 1, 7, 9, 4, 'Aceite 2021');
+INSERT INTO Detalle_Trabajo (id_detalle_trabajo, id_tarea, id_trabajo, id_estado_t, id_empleado, detalle) VALUES (9, 3, 8, 9, 4, 'Frenos 2021');
+INSERT INTO Detalle_Trabajo (id_detalle_trabajo, id_tarea, id_trabajo, id_estado_t, id_empleado, detalle) VALUES (10, 1, 9, 9, 2, 'Aceite 2025');
+INSERT INTO Detalle_Trabajo (id_detalle_trabajo, id_tarea, id_trabajo, id_estado_t, id_empleado, detalle) VALUES (11, 2, 9, 9, 2, 'Alineacion 2025');
+INSERT INTO Detalle_Trabajo (id_detalle_trabajo, id_tarea, id_trabajo, id_estado_t, id_empleado, detalle) VALUES (12, 3, 9, 9, 4, 'Frenos 2025');
