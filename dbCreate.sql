@@ -93,7 +93,7 @@ id_local INT NOT NULL REFERENCES Local(id_local) ON UPDATE CASCADE ON DELETE RES
 id_estado_t INT NOT NULL REFERENCES EstadoT(id_estado_t) ON UPDATE CASCADE ON DELETE RESTRICT,
 id_empleado_jefe INT NOT NULL REFERENCES Empleado(id_empleado) ON UPDATE CASCADE ON DELETE RESTRICT,
 fecha_inicio DATE NOT NULL,
-fecha_fin DATE NOT NULL
+fecha_fin DATE
 );
 
 CREATE TABLE IF NOT EXISTS Detalle_Trabajo (

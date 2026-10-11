@@ -16,8 +16,6 @@ TRUNCATE TABLE
     Empresa
 RESTART IDENTITY CASCADE;
 
---Carga de datos para las tablas--
-
 -- Tabla Empresa--
 INSERT INTO Empresa(id_empresa,nombre_E, rut_E) VALUES (1,'Taller Mecánico Central', '76.123.456-K');
 INSERT INTO Empresa(id_empresa,nombre_E, rut_E) VALUES (2,'Taller Mecánico del MISH', '67.567.236-7');
@@ -155,3 +153,4 @@ INSERT INTO Detalle_Trabajo (id_detalle_trabajo, id_tarea, id_trabajo, id_estado
 INSERT INTO Detalle_Trabajo (id_detalle_trabajo, id_tarea, id_trabajo, id_estado_t, id_empleado, detalle) VALUES (10, 1, 9, 9, 2, 'Aceite 2025');
 INSERT INTO Detalle_Trabajo (id_detalle_trabajo, id_tarea, id_trabajo, id_estado_t, id_empleado, detalle) VALUES (11, 2, 9, 9, 2, 'Alineacion 2025');
 INSERT INTO Detalle_Trabajo (id_detalle_trabajo, id_tarea, id_trabajo, id_estado_t, id_empleado, detalle) VALUES (12, 3, 9, 9, 4, 'Frenos 2025');
+INSERT INTO Detalle_Trabajo (id_detalle_trabajo, id_tarea, id_trabajo, id_estado_t, id_empleado, detalle) VALUES (13, 3, 9, 9, 3, 'Frenos 2026');
