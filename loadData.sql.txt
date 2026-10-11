@@ -1,4 +1,22 @@
-<--Carga de datos para las tablas-->
+TRUNCATE TABLE
+	Detalle_Trabajo,
+    Trabajo,
+    Detalle_Presupuesto,
+    Presupuesto,
+    Detalle_Servicio,
+    Sueldo,
+    Empleado,
+    Servicio,
+    Local,
+    Vehiculo,
+    Tarea,
+    EstadoT,
+    EstadoP,
+    Cargo,
+    Empresa
+RESTART IDENTITY CASCADE;
+
+--Carga de datos para las tablas--
 
 -- Tabla Empresa--
 INSERT INTO Empresa(id_empresa,nombre_E, rut_E) VALUES (1,'Taller Mecánico Central', '76.123.456-K');
@@ -117,7 +135,7 @@ INSERT INTO Detalle_Presupuesto (id_detalle_presupuesto, id_tarea, id_presupuest
 INSERT INTO Trabajo (id_trabajo, id_presupuesto, id_local, id_estado_t, id_empleado_jefe, fecha_inicio, fecha_fin) VALUES (1, 1, 1, 5, 1, '2026-10-07', '2026-10-10');
 INSERT INTO Trabajo (id_trabajo, id_presupuesto, id_local, id_estado_t, id_empleado_jefe, fecha_inicio, fecha_fin) VALUES (2, 3, 1, 10, 1, '2026-10-08', '2026-10-08');
 INSERT INTO Trabajo (id_trabajo, id_presupuesto, id_local, id_estado_t, id_empleado_jefe, fecha_inicio, fecha_fin) VALUES (3, 4, 1, 6, 1, '2026-10-09', NULL); 
-INSERT INTO Trabajo (id_trabajo, id_presupuesto, id_local, id_estado_t, id_empleado_jefe, fecha_inicio, fecha_fin) VALUES (4, 5, 2, 11, 3, '2026-10-10', '2026-10-10'); 
+INSERT INTO Trabajo (id_trabajo, id_presupuesto, id_local, id_estado_t, id_empleado_jefe, fecha_inicio, fecha_fin) VALUES (4, 5, 2, 11, 3, '2020-01-20', '2020-03-10'); 
 INSERT INTO Trabajo (id_trabajo, id_presupuesto, id_local, id_estado_t, id_empleado_jefe, fecha_inicio, fecha_fin) VALUES (5, 6, 1, 9, 1, '2020-03-16', '2020-03-18'); 
 INSERT INTO Trabajo (id_trabajo, id_presupuesto, id_local, id_estado_t, id_empleado_jefe, fecha_inicio, fecha_fin) VALUES (6, 7, 1, 9, 1, '2020-05-21', '2020-05-25'); 
 INSERT INTO Trabajo (id_trabajo, id_presupuesto, id_local, id_estado_t, id_empleado_jefe, fecha_inicio, fecha_fin) VALUES (7, 8, 1, 9, 1, '2021-06-11', '2021-06-12'); 
